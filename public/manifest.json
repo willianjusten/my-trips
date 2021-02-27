@@ -1,6 +1,6 @@
 {
-  "name": "React Avançado - Boilerplate",
-  "short_name": "React Avançado",
+  "name": "My Trips",
+  "short_name": "My Trips",
   "icons": [
     {
       "src": "/img/icon-192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "background_color": "#06092B",
-  "description": "Boilerplate utilizando Typescript, React, NextJS e Styled Components!",
+  "description": "A simple project to show my favorite spots in the world.",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#06092B"
