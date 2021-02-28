@@ -3,6 +3,7 @@ import client from 'graphql/client'
 import { GET_PAGES, GET_PAGE_BY_SLUG } from 'graphql/queries'
 import { useRouter } from 'next/dist/client/router'
 import PageTemplate, { PageTemplateProps } from 'templates/Pages'
+import { GetPageBySlugQuery, GetPagesQuery } from 'grapqhl/generated/graphql'
 
 export default function Page({ heading, body }: PageTemplateProps) {
   const router = useRouter()
@@ -14,7 +15,7 @@ export default function Page({ heading, body }: PageTemplateProps) {
 }
 
 export async function getStaticPaths() {
-  const { pages } = await client.request(GET_PAGES, { first: 3 })
+  const { pages } = await client.request<GetPagesQuery>(GET_PAGES, { first: 3 })
 
   const paths = pages.map(({ slug }) => ({
     params: { slug }
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { page } = await client.request(GET_PAGE_BY_SLUG, {
+  const { page } = await client.request<GetPageBySlugQuery>(GET_PAGE_BY_SLUG, {
     slug: `${params?.slug}`
   })
 
