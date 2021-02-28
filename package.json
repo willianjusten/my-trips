@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "@styled-icons/evaicons-outline": "^10.18.0",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
     "leaflet": "^1.7.1",
     "next": "10.0.7",
     "next-pwa": "^5.0.5",
