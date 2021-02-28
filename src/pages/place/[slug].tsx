@@ -37,6 +37,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!place) return { notFound: true }
 
   return {
+    revalidate: 60 * 60 * 24, // once per day
     props: {
       place
     }
