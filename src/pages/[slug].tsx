@@ -3,7 +3,7 @@ import client from 'graphql/client'
 import { GET_PAGES, GET_PAGE_BY_SLUG } from 'graphql/queries'
 import { useRouter } from 'next/dist/client/router'
 import PageTemplate, { PageTemplateProps } from 'templates/Pages'
-import { GetPageBySlugQuery, GetPagesQuery } from 'grapqhl/generated/graphql'
+import { GetPageBySlugQuery, GetPagesQuery } from 'graphql/generated/graphql'
 
 export default function Page({ heading, body }: PageTemplateProps) {
   const router = useRouter()
