@@ -44,13 +44,11 @@ const Map = ({ places }: MapProps) => {
         center={[0, 0]}
         zoom={3}
         style={{ height: '100%', width: '100%' }}
-        worldCopyJump={true}
         minZoom={3}
         maxBounds={[
-          [-180, 85],
-          [180, -85]
+          [-180, -180],
+          [180, 180]
         ]}
-        boundsOptions={{ padding: [50, 50] }}
       >
         <CustomTileLayer />
 
