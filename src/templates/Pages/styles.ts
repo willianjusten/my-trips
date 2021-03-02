@@ -20,7 +20,7 @@ export const Body = styled.div`
   // serve para estilos do body
   // p, a, ul, li, blockquote
   p {
-    font-size: var(--medium);
-    line-height: var(--medium);
+    font-size: 2rem;
+    line-height: 1.5;
   }
 `
