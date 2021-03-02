@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
 
   return {
-    revalidate: 60 * 60 * 24, // once per day
+    revalidate: 60, // once per day
     props: {
       places
     }
