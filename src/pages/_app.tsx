@@ -6,6 +6,7 @@ import { DefaultSeo } from 'next-seo'
 import SEO from '../../next-seo.config'
 
 import GlobalStyles from 'styles/global'
+import { StickyNote } from 'components/StickyNote'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -30,6 +31,13 @@ function App({ Component, pageProps }: AppProps) {
         height={3}
       />
       <Component {...pageProps} />
+
+      <StickyNote>
+        <p>
+          Quer fazer um site igual? Aprenda no curso{' '}
+          <a href="https://nextjs.willianjusten.com.br">NextJS na prática</a>
+        </p>
+      </StickyNote>
     </>
   )
 }

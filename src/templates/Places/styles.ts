@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.section`
   max-width: var(--container);
+  padding-bottom: var(--large);
   margin: auto;
 `
 
