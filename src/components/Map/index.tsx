@@ -1,7 +1,9 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
+
 import { MapContainer, TileLayer, Marker, MapConsumer } from 'react-leaflet'
 
 import * as S from './styles'
+import { mapView } from './config'
 
 type Place = {
   id: string
@@ -41,8 +43,8 @@ const Map = ({ places }: MapProps) => {
   return (
     <S.MapWrapper>
       <MapContainer
-        center={[0, 0]}
-        zoom={3}
+        center={mapView.center}
+        zoom={mapView.zoom}
         style={{ height: '100%', width: '100%' }}
         minZoom={3}
         maxBounds={[
@@ -60,6 +62,13 @@ const Map = ({ places }: MapProps) => {
             if (width < 768) {
               map.setMinZoom(2)
             }
+
+            map.addEventListener('dragend', () => {
+              mapView.setView(map.getCenter())
+            })
+            map.addEventListener('zoomend', () => {
+              mapView.setView(map.getCenter(), map.getZoom())
+            })
 
             return null
           }}
