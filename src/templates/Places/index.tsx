@@ -69,14 +69,22 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
 
           <S.Gallery>
             {place.gallery.map((image, index) => (
-              <Image
-                key={`photo-${index}`}
-                src={image.url}
-                alt={place.name}
-                width={image.width}
-                height={image.height}
-                quality={75}
-              />
+              <>
+                <Image
+                  key={`photo-${index}`}
+                  src={image.url}
+                  alt={place.name}
+                  width={image.width}
+                  height={image.height}
+                  quality={75}
+                />
+                <S.Caption>
+                  <>
+                    Você pode ver mais fotos minhas no{' '}
+                    <a href="https://unsplash.com/@willianjusten">Unsplash</a>
+                  </>
+                </S.Caption>
+              </>
             ))}
           </S.Gallery>
         </S.Container>

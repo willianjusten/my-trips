@@ -25,7 +25,7 @@ export const Body = styled.div`
 
 export const Gallery = styled.div`
   display: grid;
-  grid-gap: var(--medium);
+  margin-top: var(--medium);
 
   img {
     background: #f6f7f8;
@@ -47,5 +47,15 @@ export const Gallery = styled.div`
         background-position: 40rem 0;
       }
     }
+  }
+`
+
+export const Caption = styled.p`
+  font-size: var(--small);
+  color: var(--grey);
+  margin-bottom: var(--medium);
+
+  a {
+    font-size: var(--small);
   }
 `
