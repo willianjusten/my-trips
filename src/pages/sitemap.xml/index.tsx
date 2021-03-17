@@ -8,7 +8,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
 
   const fields = places.map(({ slug }) => ({
-    loc: `https://my-trips.willianjusten.com.br/${slug}`,
+    loc: `https://my-trips.willianjusten.com.br/place/${slug}`,
     lastmod: new Date().toISOString()
   }))
 
