@@ -24,6 +24,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Create .env
+        run: echo '${{ secrets.envtesting }}' > .env
+
       - name: Install dependencies
         run: yarn install
 
