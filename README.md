@@ -2,6 +2,10 @@
 
 > A simple website to show pinned places that you went or you want to go
 
+## NextJs na Prática
+
+This project is part of a course called [NextJS na Prática](https://nextjs.willianjusten.com.br/), if you want to learn how to do it, this is the way.
+
 ## Getting Started
 
 ### GraphCMS
